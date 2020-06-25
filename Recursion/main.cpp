@@ -24,19 +24,6 @@ int calc(std::string str) {
     return -1;
 }
 
-void printPermutations(std::string str) {
-    if (str.length() == 1) {
-        std::cout << str;
-        std::cout << "\n";
-        return;
-    }
-    int index = rand() % str.length();
-    std::string c = str.substr(index, 1);
-    std::cout << c;
-    std::string new_str = str.substr(0, index) + str.substr(str.find(c) + 1);
-    printPermutations(new_str);
-}
-
 int evaluate(std::string str) {
     std::regex re1("[0-9]");
     if (regex_match(str, re1)) {
@@ -77,18 +64,6 @@ int evaluate(std::string str) {
         
     return -1;
 }
-
-
-//void evaluateRecursion(std::string str, int sum) {
-//  if (regex_match (str, re(/[0-9]/) ) {
-//      return sum
-//  }
-//   if (regex_match(str, refex())
-//
-//
-//    return evaluate(str, sum);
-//}
-
 
 int main(int argc, const char * argv[]) {
     // insert code here...
