@@ -14,7 +14,7 @@
 #include <vector>
 #include "QueueIterator.hpp"
 
-template <class T>
+template <typename T>
 class Queue {
     int count = 0;
     std::vector<T> list;

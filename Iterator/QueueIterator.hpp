@@ -14,6 +14,6 @@ template <class T>
 class QueueIterator {
 public:
     T data;
-    T* next;
+    QueueIterator<T>* next;
 };
 #endif /* QueueIterator_hpp */

@@ -16,8 +16,15 @@ int main(int argc, const char * argv[]) {
     q->enque(2);
     q->enque(3);
     
-    while(q->isEmpty()) {
-        std::cout << std::to_string(q->deque());
+    QueueIterator<int> iterator = q->makeIterator();
+    QueueIterator<int> *it = &iterator;
+    while(it != NULL) {
+        std::cout << std::to_string(it->data) + "\n";
+        it = it->next;
+    }
+    
+    while(!q->isEmpty()) {
+        std::cout << std::to_string(q->deque()) + "\n";
     }
     
     return 0;
