@@ -13,6 +13,8 @@
 		84A347DC24BCDCBD009B7E71 /* QueueIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347DA24BCDCBD009B7E71 /* QueueIterator.cpp */; };
 		84A347E724BD0C97009B7E71 /* Bag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347E324BD0C97009B7E71 /* Bag.cpp */; };
 		84A347E824BD0C97009B7E71 /* BagIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347E524BD0C97009B7E71 /* BagIterator.cpp */; };
+		84A347EB24BD13B8009B7E71 /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347E924BD13B8009B7E71 /* Stack.cpp */; };
+		84A347EE24BD13C7009B7E71 /* StackIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347EC24BD13C7009B7E71 /* StackIterator.cpp */; };
 		84B9DB7024A653D8007023DF /* Backtracking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B9DB6D24A653C6007023DF /* Backtracking.cpp */; };
 		84B9DB7324A6577E007023DF /* Evaluation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B9DB7124A6577E007023DF /* Evaluation.cpp */; };
 		84C8756924B8B488008B3525 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8756824B8B488008B3525 /* main.swift */; };
@@ -103,6 +105,10 @@
 		84A347E424BD0C97009B7E71 /* BagIterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BagIterator.hpp; sourceTree = "<group>"; };
 		84A347E524BD0C97009B7E71 /* BagIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BagIterator.cpp; sourceTree = "<group>"; };
 		84A347E624BD0C97009B7E71 /* Bag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bag.hpp; sourceTree = "<group>"; };
+		84A347E924BD13B8009B7E71 /* Stack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stack.cpp; sourceTree = "<group>"; };
+		84A347EA24BD13B8009B7E71 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		84A347EC24BD13C7009B7E71 /* StackIterator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StackIterator.cpp; sourceTree = "<group>"; };
+		84A347ED24BD13C7009B7E71 /* StackIterator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StackIterator.hpp; sourceTree = "<group>"; };
 		84B9DB6D24A653C6007023DF /* Backtracking.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Backtracking.cpp; sourceTree = "<group>"; };
 		84B9DB6E24A653C6007023DF /* Backtracking.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Backtracking.hpp; sourceTree = "<group>"; };
 		84B9DB7124A6577E007023DF /* Evaluation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Evaluation.cpp; sourceTree = "<group>"; };
@@ -180,6 +186,10 @@
 				8462997E24BCB1CB00EC11B3 /* main.cpp */,
 				84A347E324BD0C97009B7E71 /* Bag.cpp */,
 				84A347E624BD0C97009B7E71 /* Bag.hpp */,
+				84A347E924BD13B8009B7E71 /* Stack.cpp */,
+				84A347EA24BD13B8009B7E71 /* Stack.hpp */,
+				84A347EC24BD13C7009B7E71 /* StackIterator.cpp */,
+				84A347ED24BD13C7009B7E71 /* StackIterator.hpp */,
 				84A347E524BD0C97009B7E71 /* BagIterator.cpp */,
 				84A347E424BD0C97009B7E71 /* BagIterator.hpp */,
 				8462998924BCB3CA00EC11B3 /* Queue.cpp */,
@@ -458,6 +468,8 @@
 			files = (
 				8462997F24BCB1CB00EC11B3 /* main.cpp in Sources */,
 				84A347E824BD0C97009B7E71 /* BagIterator.cpp in Sources */,
+				84A347EB24BD13B8009B7E71 /* Stack.cpp in Sources */,
+				84A347EE24BD13C7009B7E71 /* StackIterator.cpp in Sources */,
 				8462998B24BCB3CA00EC11B3 /* Queue.cpp in Sources */,
 				84A347E724BD0C97009B7E71 /* Bag.cpp in Sources */,
 				84A347DC24BCDCBD009B7E71 /* QueueIterator.cpp in Sources */,

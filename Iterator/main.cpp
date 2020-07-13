@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Bag.hpp"
 #include "Queue.hpp"
+#include "Stack.hpp"
 
 void testBag() {
     Bag<int> *b = new Bag<int>();
@@ -24,12 +25,31 @@ void testBag() {
     }
 }
 
+void testStack() {
+    Stack<int> *s = new Stack<int>();
+    s->push(1);
+    s->push(2);
+    s->push(3);
+    
+    StackIterator<int> iterator = s->makeIterator();
+    StackIterator<int> *it = &iterator;
+    while(it != NULL) {
+        std::cout << std::to_string(it->data) + "\n";
+        it = it->next;
+    }
+    
+    while(!s->isEmpty()) {
+        std::cout << std::to_string(s->pop()) + "\n";
+    }
+}
+
+
 
 void testQueue() {
     Queue<int> *q = new Queue<int>();
-    q->enque(1);
-    q->enque(2);
-    q->enque(3);
+    q->enqueue(1);
+    q->enqueue(2);
+    q->enqueue(3);
     
     QueueIterator<int> iterator = q->makeIterator();
     QueueIterator<int> *it = &iterator;
@@ -39,15 +59,18 @@ void testQueue() {
     }
     
     while(!q->isEmpty()) {
-        std::cout << std::to_string(q->deque()) + "\n";
+        std::cout << std::to_string(q->dequeue()) + "\n";
     }
 }
 
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    std::cout << "Bag >>>>>>>>\n";
     testBag();
-//    testQueue();
+    std::cout << "\nStack >>>>>>>>\n";
+    testStack();
+    std::cout << "\nQueue >>>>>>>>\n";
+    testQueue();
     
     return 0;
 }

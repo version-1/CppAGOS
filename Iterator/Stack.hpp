@@ -1,29 +1,29 @@
 //
-//  Queue.hpp
+//  Stack.hpp
 //  Iterator
 //
 //  Created by Administlator on 2020/07/13.
 //  Copyright © 2020 Administlator. All rights reserved.
 //
 
-#ifndef Queue_hpp
-#define Queue_hpp
-
+#ifndef Stack_hpp
+#define Stack_hpp
 
 #include <stdio.h>
 #include <vector>
-#include "QueueIterator.hpp"
+#include "StackIterator.hpp"
 
 template <typename T>
-class Queue {
+class Stack {
     int count = 0;
     std::vector<T> list;
 public:
-    void enqueue (T e);
-    T dequeue ();
+    void push (T e);
+    T pop ();
     T peek();
     bool isEmpty();
-    QueueIterator<T> makeIterator();
+    StackIterator<T> makeIterator();
 };
 
-#endif /* Queue_hpp */
+
+#endif /* Stack_hpp */
