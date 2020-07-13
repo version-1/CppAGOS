@@ -88,7 +88,7 @@ QueueIterator<int> Queue<int>::makeIterator() {
         iterator->data = list.at(i);
         if (list.size() -1 > i) {
             QueueIterator<int> *q = new QueueIterator<int>();
-            q->data = list.at(1+1);
+            q->data = list.at(i+1);
             iterator->next = q;
         }
         iterator = iterator->next;

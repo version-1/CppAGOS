@@ -10,5 +10,10 @@
 #define BagIterator_hpp
 
 #include <stdio.h>
-
+template<class T>
+class BagIterator {
+public:
+    T data;
+    BagIterator<T> *next;
+};
 #endif /* BagIterator_hpp */
