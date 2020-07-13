@@ -7,9 +7,18 @@
 //
 
 #include <iostream>
+#include "Queue.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    Queue<int> *q = new Queue<int>();
+    q->enque(1);
+    q->enque(2);
+    q->enque(3);
+    
+    while(q->isEmpty()) {
+        std::cout << std::to_string(q->deque());
+    }
+    
     return 0;
 }
