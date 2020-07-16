@@ -13,7 +13,6 @@ func kthSmallest(arr: inout [Int], l: Int, r: Int, k: Int) -> Int {
     
     let pos: Int = partition(arr: &arr, l: l, r: r);
     
-    print("after", pos, l, k)
     if pos - l == k - 1 {
         return arr[pos];
     }
@@ -27,7 +26,7 @@ func kthSmallest(arr: inout [Int], l: Int, r: Int, k: Int) -> Int {
 func partition(arr: inout [Int], l: Int, r: Int) -> Int {
     let x: Int = arr[r]
     var i = l;
-    if (r-1 > l) {
+    if (r-1 >= l) {
         for j in l...(r-1) {
             count += 1
             if (arr[j] <= x) {
@@ -42,12 +41,11 @@ func partition(arr: inout [Int], l: Int, r: Int) -> Int {
 }
 
 func main () {
-    let k = 4
-    var arr: [Int] = [10, 4, 7, 9, 5, 1, 2, 8, 3]
+    let k = 7
+    var arr: [Int] = Array(1...10)
     arr.shuffle()
     print(arr)
     let smallest = kthSmallest(arr: &arr, l: 0, r: arr.count - 1, k: k)
-    print(arr)
     
     var list: [Int] = [smallest]
     for item in arr {
@@ -55,6 +53,7 @@ func main () {
             list.append(item)
         }
     }
+    list.sort()
     
     print("K'th smallest elements are " + list.description)
     print("count " + String(count) )

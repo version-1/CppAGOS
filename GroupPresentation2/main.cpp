@@ -43,9 +43,10 @@ int partition(int arr[], int l, int r)
     swap(&arr[i], &arr[r]);
     return i;
 }
+
 int main(int argc, const char * argv[]) {
-    int arr[] = { 3, 2, 1, 4, 5, 6, 7, 8, 9, 10 };
-    int n = sizeof(arr) / sizeof(arr[0]), k = 9;
+    int arr[] = {1, 6, 8, 4, 3, 10, 7, 9, 5, 2};
+    int n = sizeof(arr) / sizeof(arr[0]), k = 2;
     cout << "K'th smallest element is " << kthSmallest(arr, 0, n - 1, k);
     return 0;
 }
