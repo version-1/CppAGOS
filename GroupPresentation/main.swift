@@ -8,20 +8,24 @@
 
 import Foundation
 
-var count = 0
 func kthSmallest(arr: inout [Int], l: Int, r: Int, k: Int) {
     
-    let pos: Int = partition(arr: &arr, l: l, r: r);
+    let pivotIndex: Int = partition(arr: &arr, l: l, r: r);
     
-    if pos - l == k - 1 {
+    
+    let smallesLength: Int = pivotIndex - l
+    
+    if smallesLength == k - 1 {
         return
     }
-    if pos - l > k - 1 {
-        kthSmallest(arr: &arr, l: l, r: pos - 1, k: k)
+    
+    // sort numbers on ther left of pivot index
+    if smallesLength > k - 1 {
+        kthSmallest(arr: &arr, l: l, r: pivotIndex - 1, k: k)
         return
     }
     
-    kthSmallest(arr: &arr, l: pos + 1, r: r, k: k - pos + l - 1)
+    kthSmallest(arr: &arr, l: pivotIndex + 1, r: r, k: k - pivotIndex + l - 1)
     return
 }
 
@@ -30,7 +34,6 @@ func partition(arr: inout [Int], l: Int, r: Int) -> Int {
     var i = l;
     if (r-1 >= l) {
         for j in l...(r-1) {
-            count += 1
             if (arr[j] <= x) {
                 arr.swapAt(i, j)
                 i += 1
@@ -42,9 +45,9 @@ func partition(arr: inout [Int], l: Int, r: Int) -> Int {
     return i;
 }
 
-func main () {
+func kthSmallestElements () {
     let k = 3
-    var arr: [Int] = [3, 5, 6, 7, 8, 25]
+    var arr: [Int] = Array(0...9)
     arr.shuffle()
     print(arr)
     kthSmallest(arr: &arr, l: 0, r: arr.count - 1, k: k)
@@ -52,8 +55,10 @@ func main () {
     var list: [Int] = Array(arr[0...(k-1)])
     list.sort()
     
+    print("")
     print(String(k) + "'th smallest elements are " + list.description)
-    print("count " + String(count) )
 }
 
-main()
+
+
+kthSmallestElements()
