@@ -47,7 +47,7 @@ func partition(arr: inout [Int], l: Int, r: Int) -> Int {
 
 func kthSmallestElements () {
     let k = 3
-    var arr: [Int] = Array(0...9)
+    var arr: [Int] = Array(1...5)
     arr.shuffle()
     print(arr)
     kthSmallest(arr: &arr, l: 0, r: arr.count - 1, k: k)
