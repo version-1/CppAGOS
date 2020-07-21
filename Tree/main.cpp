@@ -2,7 +2,7 @@
 //  main.cpp
 //  Tree
 //
-//  Created by Administlator on 2020/07/20.
+//  Created by Administlator on 2020/07/21.
 //  Copyright © 2020 Administlator. All rights reserved.
 //
 
@@ -11,32 +11,34 @@
 #include <vector>
 #include <iostream>
 
-void split(const std::string& str, std::vector<std::string>& cont, char delim = ' ')
+using namespace std;
+
+void split(const string& str, vector<std::string>& cont, char delim = ' ')
 {
-    std::stringstream ss(str);
-    std::string token;
-    while (std::getline(ss, token, delim)) {
+    stringstream ss(str);
+    string token;
+    while (getline(ss, token, delim)) {
         cont.push_back(token);
     }
 }
 
-std::vector<std::vector<std::string>> prompt() {
-    std::vector<std::vector<std::string>> input;
-    std::cout << "input:" ;
+vector<vector<string>> prompt() {
+    vector<vector<string>> input;
+    cout << "input:" ;
     
-    std::string line;
+    string line;
     int count = 0;
     int length = -1;
     while (getline(std::cin, line))
     {
         if (count > 0 && line.length() > 0) {
-            std::vector<std::string> splitedLine;
+            vector<string> splitedLine;
             split(line, splitedLine, ' ');
             input.push_back(splitedLine);
         }
         
         if (count == 0) {
-            length = std::stoi(line);
+            length = stoi(line);
         }
         if (count >= length) {
             break;
@@ -47,9 +49,28 @@ std::vector<std::vector<std::string>> prompt() {
     return input;
 }
 
+void myParent(vector<vector<string>> input) {
+    vector<int> parents;
+    parents.assign(input.size() + 1, 0);
+    for (int i = 0; i < input.size(); i++) {
+        int index = stoi(input.at(i).at(1)) - 1;
+        vector<int> parent;
+        parent.push_back(index);
+        parents.at(index) = stoi(input.at(i).at(0));
+    }
+    
+    for (int i = 0; i < parents.size(); i++) {
+        if (parents.at(i) == 0) {
+            cout << i << "\n";
+        } else {
+            cout << parents.at(i)  << "\n";
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::vector<std::vector<std::string>> input = prompt();
+    vector<vector<string>> input = prompt();
+    myParent(input);
     
     return 0;
 }
