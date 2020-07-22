@@ -50,20 +50,17 @@ vector<vector<string>> prompt() {
 }
 
 void myParent(vector<vector<string>> input) {
-    vector<int> parents;
-    parents.assign(input.size() + 1, 0);
+    vector<int> parents(input.size() + 1, -1);
     for (int i = 0; i < input.size(); i++) {
-        int index = stoi(input.at(i).at(1)) - 1;
+        int key = stoi(input.at(i).at(0));
+        int value = stoi(input.at(i).at(1));
         vector<int> parent;
-        parent.push_back(index);
-        parents.at(index) = stoi(input.at(i).at(0));
+        parents[value - 1] = key;
     }
     
     for (int i = 0; i < parents.size(); i++) {
-        if (parents.at(i) == 0) {
-            cout << i << "\n";
-        } else {
-            cout << parents.at(i)  << "\n";
+        if (parents[i] != -1) {
+            cout << parents[i] << "\n";
         }
     }
 }
