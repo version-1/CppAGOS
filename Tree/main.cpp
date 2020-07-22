@@ -9,6 +9,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <queue>
 #include <iostream>
 
 using namespace std;
@@ -49,7 +50,8 @@ vector<vector<string>> prompt() {
     return input;
 }
 
-void myParent(vector<vector<string>> input) {
+void myParent() {
+    vector<vector<string>> input = prompt();
     vector<int> parents(input.size() + 1, -1);
     for (int i = 0; i < input.size(); i++) {
         int key = stoi(input.at(i).at(0));
@@ -65,9 +67,47 @@ void myParent(vector<vector<string>> input) {
     }
 }
 
-int main(int argc, const char * argv[]) {
+vector<int> bfs(vector<vector<string>> input, int root) {
+    vector<int> dist(input.size(), 0);
+    vector<int> farNode(2, 0);
+    queue<int> que;
+    
+    que.push(root);
+  
+    while(!que.empty()) {
+        int v = que.front();
+        que.pop();
+        
+        vector<string> row = input[v];
+        for (int i = 1; i < row.size() - 1; i = i + 2) {
+            int nodeIndex = stoi(row[i]) - 1;
+            int distance = stoi(row[i+1]);
+            if (nodeIndex == root || dist[nodeIndex] != 0) {
+                continue;
+            }
+            
+            // add distance
+            dist[nodeIndex] = dist[v] + distance;
+            if (farNode.at(1) < dist[nodeIndex]) {
+                farNode[0] = nodeIndex;
+                farNode[1] = dist[nodeIndex];
+            }
+            que.push(nodeIndex);
+        }
+    }
+    return farNode;
+}
+
+void diameter () {
     vector<vector<string>> input = prompt();
-    myParent(input);
+    vector<int> farNodeFromRoot = bfs(input, 0);
+    vector<int> result = bfs(input, farNodeFromRoot[0]);
+    cout << result[1] << "\n";
+}
+
+int main(int argc, const char * argv[]) {
+    myParent();
+    diameter();
     
     return 0;
 }
