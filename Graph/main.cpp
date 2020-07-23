@@ -25,9 +25,7 @@ void dfs(vector<int> g, vector<bool>* visit, int index) {
     
 }
 
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
+void cyclicPermutation() {
     int t;
     cout << "input:\n";
     cin >> t;
@@ -54,5 +52,10 @@ int main(int argc, const char * argv[]) {
         }
         cout << count << "\n";
     }
+}
+
+
+int main(int argc, const char * argv[]) {
+    cyclicPermutation();
     return 0;
 }
