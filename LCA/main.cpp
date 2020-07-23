@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     cin >> n;
     int i = n - 1;
     vector<vector<int>> tree(n, vector<int>(0));
-    vector<int> depth(n, -1);
+    vector<int> depth(n,-1);
     vector<int> parents(n, -1);
     while(i > 0) {
         int j, k;
@@ -54,21 +54,21 @@ int main(int argc, const char * argv[]) {
         int j, k;
         cin >> j >> k;
         if (depth[j-1] < depth[k-1]) {
-            int tmp  = depth[j-1];
-            depth[k-1] = depth[j-1];
-            depth[j-1] = tmp;
+            int tmp  = k;
+            k = j;
+            j = tmp;
         }
         
         while(depth[j-1] != depth[k-1]) {
-            j = parents[j-1];
+            j = parents[j-1] + 1;
         }
         
         while(j != k) {
-            j = parents[j-1];
-            k = parents[k-1];
+            j = parents[j-1] + 1;
+            k = parents[k-1] + 1;
         }
         
-        cout << j + 1;
+        cout << j << "\n";
         m--;
     }
 
