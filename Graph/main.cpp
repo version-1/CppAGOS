@@ -10,6 +10,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
@@ -54,8 +55,34 @@ void cyclicPermutation() {
     }
 }
 
+int seq (vector<int>* check, string num, int p, int i) {
+    if (check->at(stoi(num)) != 0) {
+        return check->at(stoi(num)) - 1;
+    }
+    
+    check->at(stoi(num)) = i;
+    int sum = 0;
+    for (int i = 0; i < num.length(); i++) {
+        int n = stoi(num.substr(i,1));
+        sum += pow(n, p);
+    }
+     
+    return seq(check, to_string(sum), p, i + 1);
+}
+
+void reqpeatingSeq() {
+    string a;
+    int p;
+    vector<int> check(10000, 0);
+    
+    cout << "input:\n";
+    cin >> a >> p;
+    cout << seq(&check, a, p, 1);
+}
+
 
 int main(int argc, const char * argv[]) {
-    cyclicPermutation();
+//    cyclicPermutation();
+    reqpeatingSeq();
     return 0;
 }
