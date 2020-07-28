@@ -11,6 +11,9 @@
 		8462998B24BCB3CA00EC11B3 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8462998924BCB3CA00EC11B3 /* Queue.cpp */; };
 		8470CFF924CB2E4E00021D4B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8470CFF824CB2E4E00021D4B /* main.cpp */; };
 		8472D0E024B5C6CD000B57C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8472D0DF24B5C6CD000B57C7 /* main.cpp */; };
+		8487A36B24D06CB000167EEB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487A36A24D06CB000167EEB /* main.swift */; };
+		8487A37024D06CC400167EEB /* UF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487A36F24D06CC400167EEB /* UF.swift */; };
+		8487A37824D06CE400167EEB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487A37724D06CE400167EEB /* main.swift */; };
 		84A347DC24BCDCBD009B7E71 /* QueueIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347DA24BCDCBD009B7E71 /* QueueIterator.cpp */; };
 		84A347E724BD0C97009B7E71 /* Bag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347E324BD0C97009B7E71 /* Bag.cpp */; };
 		84A347E824BD0C97009B7E71 /* BagIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A347E524BD0C97009B7E71 /* BagIterator.cpp */; };
@@ -52,6 +55,24 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		8472D0DB24B5C6CD000B57C7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8487A36624D06CB000167EEB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8487A37324D06CE400167EEB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -161,6 +182,11 @@
 		8470CFF824CB2E4E00021D4B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8472D0DD24B5C6CD000B57C7 /* QuickSort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QuickSort; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472D0DF24B5C6CD000B57C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8487A36824D06CB000167EEB /* UF */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UF; sourceTree = BUILT_PRODUCTS_DIR; };
+		8487A36A24D06CB000167EEB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8487A36F24D06CC400167EEB /* UF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UF.swift; path = ../../../../Downloads/UF.swift; sourceTree = "<group>"; };
+		8487A37524D06CE400167EEB /* TomatoFarm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TomatoFarm; sourceTree = BUILT_PRODUCTS_DIR; };
+		8487A37724D06CE400167EEB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		84A347DA24BCDCBD009B7E71 /* QueueIterator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QueueIterator.cpp; sourceTree = "<group>"; };
 		84A347DB24BCDCBD009B7E71 /* QueueIterator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QueueIterator.hpp; sourceTree = "<group>"; };
 		84A347E324BD0C97009B7E71 /* Bag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bag.cpp; sourceTree = "<group>"; };
@@ -215,6 +241,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8472D0DA24B5C6CD000B57C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8487A36524D06CB000167EEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8487A37224D06CE400167EEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,6 +370,23 @@
 			path = QuickSort;
 			sourceTree = "<group>";
 		};
+		8487A36924D06CB000167EEB /* UF */ = {
+			isa = PBXGroup;
+			children = (
+				8487A36F24D06CC400167EEB /* UF.swift */,
+				8487A36A24D06CB000167EEB /* main.swift */,
+			);
+			path = UF;
+			sourceTree = "<group>";
+		};
+		8487A37624D06CE400167EEB /* TomatoFarm */ = {
+			isa = PBXGroup;
+			children = (
+				8487A37724D06CE400167EEB /* main.swift */,
+			);
+			path = TomatoFarm;
+			sourceTree = "<group>";
+		};
 		84BF3DB424BF69E300130244 /* GroupPresentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +453,8 @@
 				84D0603B24C757A400564104 /* Tree */,
 				84D26D1724C9D8CB001915A9 /* Graph */,
 				8470CFF724CB2E4E00021D4B /* SushiReviews */,
+				8487A36924D06CB000167EEB /* UF */,
+				8487A37624D06CE400167EEB /* TomatoFarm */,
 				84F7B80724A3937000BBC3C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -416,6 +475,8 @@
 				84D0603A24C757A400564104 /* Tree */,
 				84D26D1624C9D8CB001915A9 /* Graph */,
 				8470CFF624CB2E4E00021D4B /* SushiReviews */,
+				8487A36824D06CB000167EEB /* UF */,
+				8487A37524D06CE400167EEB /* TomatoFarm */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -508,6 +569,40 @@
 			name = QuickSort;
 			productName = QuickSort;
 			productReference = 8472D0DD24B5C6CD000B57C7 /* QuickSort */;
+			productType = "com.apple.product-type.tool";
+		};
+		8487A36724D06CB000167EEB /* UF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8487A36C24D06CB000167EEB /* Build configuration list for PBXNativeTarget "UF" */;
+			buildPhases = (
+				8487A36424D06CB000167EEB /* Sources */,
+				8487A36524D06CB000167EEB /* Frameworks */,
+				8487A36624D06CB000167EEB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UF;
+			productName = UF;
+			productReference = 8487A36824D06CB000167EEB /* UF */;
+			productType = "com.apple.product-type.tool";
+		};
+		8487A37424D06CE400167EEB /* TomatoFarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8487A37924D06CE400167EEB /* Build configuration list for PBXNativeTarget "TomatoFarm" */;
+			buildPhases = (
+				8487A37124D06CE400167EEB /* Sources */,
+				8487A37224D06CE400167EEB /* Frameworks */,
+				8487A37324D06CE400167EEB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TomatoFarm;
+			productName = TomatoFarm;
+			productReference = 8487A37524D06CE400167EEB /* TomatoFarm */;
 			productType = "com.apple.product-type.tool";
 		};
 		84BF3DB224BF69E300130244 /* GroupPresentation */ = {
@@ -699,6 +794,12 @@
 					8472D0DC24B5C6CD000B57C7 = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					8487A36724D06CB000167EEB = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					8487A37424D06CE400167EEB = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					84BF3DB224BF69E300130244 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -757,6 +858,8 @@
 				84D0603924C757A400564104 /* Tree */,
 				84D26D1524C9D8CB001915A9 /* Graph */,
 				8470CFF524CB2E4E00021D4B /* SushiReviews */,
+				8487A36724D06CB000167EEB /* UF */,
+				8487A37424D06CE400167EEB /* TomatoFarm */,
 			);
 		};
 /* End PBXProject section */
@@ -789,6 +892,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				8472D0E024B5C6CD000B57C7 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8487A36424D06CB000167EEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8487A37024D06CC400167EEB /* UF.swift in Sources */,
+				8487A36B24D06CB000167EEB /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8487A37124D06CE400167EEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8487A37824D06CE400167EEB /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +1056,58 @@
 				DEVELOPMENT_TEAM = P56BBK28XQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8487A36D24D06CB000167EEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P56BBK28XQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8487A36E24D06CB000167EEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P56BBK28XQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8487A37A24D06CE400167EEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P56BBK28XQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8487A37B24D06CE400167EEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P56BBK28XQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1292,6 +1464,24 @@
 			buildConfigurations = (
 				8472D0E124B5C6CD000B57C7 /* Debug */,
 				8472D0E224B5C6CD000B57C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8487A36C24D06CB000167EEB /* Build configuration list for PBXNativeTarget "UF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8487A36D24D06CB000167EEB /* Debug */,
+				8487A36E24D06CB000167EEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8487A37924D06CE400167EEB /* Build configuration list for PBXNativeTarget "TomatoFarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8487A37A24D06CE400167EEB /* Debug */,
+				8487A37B24D06CE400167EEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
