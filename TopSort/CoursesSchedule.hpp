@@ -10,5 +10,10 @@
 #define CoursesSchedule_hpp
 
 #include <stdio.h>
+#include <vector>
 
+class CourseSchedule {
+public:
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites); 
+};
 #endif /* CoursesSchedule_hpp */
