@@ -12,7 +12,10 @@
 #include <stdio.h>
 #include <vector>
 
-class CourseSchedule {
+using namespace std;
+
+class CoursesSchedule {
+    void dfs(vector<int> *ordering, vector<bool> *visited, vector<vector<int>> prerequisites, int index);
 public:
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites); 
 };

@@ -7,9 +7,17 @@
 //
 
 #include <iostream>
+#include "CoursesSchedule.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    vector<vector<int> > vect{
+        { 0, 1 },
+        { 1, 2 },
+        { 2, 3 },
+        { 3, 2 }
+    };
+    CoursesSchedule cs;
+    cout << cs.canFinish(5, vect);
+    
     return 0;
 }
