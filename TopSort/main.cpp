@@ -12,12 +12,10 @@
 int main(int argc, const char * argv[]) {
     vector<vector<int> > vect{
         { 0, 1 },
-        { 1, 2 },
-        { 2, 3 },
-        { 3, 2 }
+        { 1, 0 },
     };
     CoursesSchedule cs;
-    cout << cs.canFinish(5, vect);
+    cout << cs.canFinish(4, vect);
     
     return 0;
 }

@@ -15,7 +15,7 @@
 using namespace std;
 
 class CoursesSchedule {
-    void dfs(vector<int> *ordering, vector<bool> *visited, vector<vector<int>> prerequisites, int index);
+    void topsort(vector<int> *ordering, vector<bool> *visited, vector<vector<int>> prerequisites, int index, bool *sortable);
 public:
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites); 
 };

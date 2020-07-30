@@ -12,14 +12,22 @@
 
 using namespace std;
 
-void CoursesSchedule::dfs(vector<int> *ordering, vector<bool> *visited, vector<vector<int>> prerequisites, int index) {
+void CoursesSchedule::topsort(vector<int> *ordering, vector<bool> *visited, vector<vector<int>> prerequisites, int index, bool  *sortable) {
+    if (!sortable) {
+        return;
+    }
     
     for (int i = 0; i < prerequisites.size(); i++) {
         if (prerequisites[i][0] == index) {
+            if (visited->at(index)) {
+                *sortable = false;
+                return;
+            }
             visited->at(index) = true;
-            dfs(ordering, visited, prerequisites, prerequisites[i][1]);
+            topsort(ordering, visited, prerequisites, prerequisites[i][1], sortable);
         }
     }
+    
     
     ordering->push_back(index);
 }
@@ -29,11 +37,9 @@ bool CoursesSchedule::canFinish(int numCourses, vector<vector<int>>& prerequisit
     vector<int> ordering;
     vector<bool> visited(numCourses, false);
     
-    dfs(&ordering, &visited, prerequisites, 0);
-    for (int num: ordering) {
-        cout << num << "\n";
-    }
-    
-    return true;
+    bool sortable = true;
+    topsort(&ordering, &visited, prerequisites, 0, &sortable);
+  
+    return sortable;
 };
 
