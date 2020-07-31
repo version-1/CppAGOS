@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		8418258324D31D38004814EB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8418258224D31D38004814EB /* main.cpp */; };
 		8418258924D31D5D004814EB /* CoursesSchedule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8418258724D31D5D004814EB /* CoursesSchedule.cpp */; };
-		8418258C24D31D6E004814EB /* CourseSchedule2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8418258A24D31D6E004814EB /* CourseSchedule2.cpp */; };
 		8418259924D356D0004814EB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8418259824D356CF004814EB /* main.cpp */; };
+		8418259C24D3D6B1004814EB /* CoursesSchedule2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8418259A24D3D6B1004814EB /* CoursesSchedule2.cpp */; };
 		8462997F24BCB1CB00EC11B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8462997E24BCB1CB00EC11B3 /* main.cpp */; };
 		8462998B24BCB3CA00EC11B3 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8462998924BCB3CA00EC11B3 /* Queue.cpp */; };
 		8470CFF924CB2E4E00021D4B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8470CFF824CB2E4E00021D4B /* main.cpp */; };
@@ -190,10 +190,10 @@
 		8418258224D31D38004814EB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8418258724D31D5D004814EB /* CoursesSchedule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CoursesSchedule.cpp; sourceTree = "<group>"; };
 		8418258824D31D5D004814EB /* CoursesSchedule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CoursesSchedule.hpp; sourceTree = "<group>"; };
-		8418258A24D31D6E004814EB /* CourseSchedule2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CourseSchedule2.cpp; sourceTree = "<group>"; };
-		8418258B24D31D6E004814EB /* CourseSchedule2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CourseSchedule2.hpp; sourceTree = "<group>"; };
 		8418259124D3568C004814EB /* TomatoFarm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TomatoFarm; sourceTree = BUILT_PRODUCTS_DIR; };
 		8418259824D356CF004814EB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8418259A24D3D6B1004814EB /* CoursesSchedule2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CoursesSchedule2.cpp; sourceTree = "<group>"; };
+		8418259B24D3D6B1004814EB /* CoursesSchedule2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CoursesSchedule2.hpp; sourceTree = "<group>"; };
 		8462997C24BCB1CB00EC11B3 /* Iterator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Iterator; sourceTree = BUILT_PRODUCTS_DIR; };
 		8462997E24BCB1CB00EC11B3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8462998924BCB3CA00EC11B3 /* Queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
@@ -365,8 +365,8 @@
 				8418258224D31D38004814EB /* main.cpp */,
 				8418258724D31D5D004814EB /* CoursesSchedule.cpp */,
 				8418258824D31D5D004814EB /* CoursesSchedule.hpp */,
-				8418258A24D31D6E004814EB /* CourseSchedule2.cpp */,
-				8418258B24D31D6E004814EB /* CourseSchedule2.hpp */,
+				8418259A24D3D6B1004814EB /* CoursesSchedule2.cpp */,
+				8418259B24D3D6B1004814EB /* CoursesSchedule2.hpp */,
 			);
 			path = TopSort;
 			sourceTree = "<group>";
@@ -931,7 +931,7 @@
 			files = (
 				8418258324D31D38004814EB /* main.cpp in Sources */,
 				8418258924D31D5D004814EB /* CoursesSchedule.cpp in Sources */,
-				8418258C24D31D6E004814EB /* CourseSchedule2.cpp in Sources */,
+				8418259C24D3D6B1004814EB /* CoursesSchedule2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
