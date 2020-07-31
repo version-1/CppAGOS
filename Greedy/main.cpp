@@ -47,6 +47,21 @@ int leastInterval (vector<char>& tasks, int n) {
     return minTaskCount < tasks.size() ? tasks.size(): minTaskCount;
 }
 
+int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
+    int currentTank = 0;
+    int totalTank = 0;
+    int pos = 0;
+    for (int i = 0; i < gas.size(); i++) {
+        currentTank += gas[i] - cost[i];
+        totalTank += gas[i] - cost[i];
+        if (currentTank < 0) {
+            currentTank = 0;
+            pos = i + 1;
+        }
+    }
+    return totalTank < 0 ? - 1 : pos;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
 //    vector<vector<int>> costs({
@@ -57,14 +72,23 @@ int main(int argc, const char * argv[]) {
 //    });
 //    cout << twoCitySchedCost(costs);
     
-    vector<char> vect({
-        65,
-        65,
-        65,
-        66,
-        66,
-        66,
+//    vector<char> vect({
+//        65,
+//        65,
+//        65,
+//        66,
+//        66,
+//        66,
+//    });
+//    cout << leastInterval(vect, 2);
+    
+    vector<int> gas({
+        1, 2, 3, 4, 5
     });
-    cout << leastInterval(vect, 2);
+    vector<int> cost({
+        3, 4, 5, 1, 2
+    });
+    
+    cout << canCompleteCircuit(gas, cost);
     return 0;
 }
