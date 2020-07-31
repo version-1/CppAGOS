@@ -62,6 +62,26 @@ int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
     return totalTank < 0 ? - 1 : pos;
 }
 
+vector<int> partitionLabels(string S) {
+    vector<int> last(26, -1);
+    vector<int> partitions;
+    int anchor = 0;
+    int end = 0;
+    
+    for (int i = 0; i < S.length(); i++) {
+        last[(int)S[i] - 97] = i;
+    }
+    
+    for (int i = 0; i < S.length(); i++) {
+        end = max(end, last[(int)S[i] - 97]);
+        if (i == end) {
+            partitions.push_back(i - anchor + 1);
+            anchor = i + 1;
+        }
+    }
+    return partitions;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
 //    vector<vector<int>> costs({
@@ -82,13 +102,21 @@ int main(int argc, const char * argv[]) {
 //    });
 //    cout << leastInterval(vect, 2);
     
-    vector<int> gas({
-        1, 2, 3, 4, 5
-    });
-    vector<int> cost({
-        3, 4, 5, 1, 2
-    });
-    
-    cout << canCompleteCircuit(gas, cost);
+//    vector<int> gas({
+//        1, 2, 3, 4, 5
+//    });
+//    vector<int> cost({
+//        3, 4, 5, 1, 2
+//    });
+//
+//    cout << canCompleteCircuit(gas, cost);
+//    vector<int> gas({
+    //        1, 2, 3, 4, 5
+    //    });
+    //    vector<int> cost({
+    //        3, 4, 5, 1, 2
+    //    });
+    //
+//        cout << canCompleteCircuit(gas, cost);
     return 0;
 }
