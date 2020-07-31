@@ -28,7 +28,9 @@ vector<int> CoursesSchedule2::findOrder(int numCourses, vector<vector<int>>& pre
     vector<int> ordering;
     vector<bool> visited(numCourses, false);
     
-    topsort(&ordering, &visited, prerequisites, 0);
+    for (int i =0; i < numCourses; i++) {
+      topsort(&ordering, &visited, prerequisites, i);
+    }
     reverse(ordering.begin(), ordering.end());
     
     return ordering;
