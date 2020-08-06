@@ -16,7 +16,6 @@
 		8462998B24BCB3CA00EC11B3 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8462998924BCB3CA00EC11B3 /* Queue.cpp */; };
 		846BE32024DAFF86009C04E6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE31F24DAFF86009C04E6 /* main.swift */; };
 		846BE32724DB0357009C04E6 /* MST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE32624DB0357009C04E6 /* MST.swift */; };
-		846BE32924DB06E5009C04E6 /* IndexPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE32824DB06E5009C04E6 /* IndexPriorityQueue.swift */; };
 		8470CFF924CB2E4E00021D4B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8470CFF824CB2E4E00021D4B /* main.cpp */; };
 		8472D0E024B5C6CD000B57C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8472D0DF24B5C6CD000B57C7 /* main.cpp */; };
 		8487A36B24D06CB000167EEB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487A36A24D06CB000167EEB /* main.swift */; };
@@ -225,7 +224,6 @@
 		846BE31D24DAFF86009C04E6 /* MST */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MST; sourceTree = BUILT_PRODUCTS_DIR; };
 		846BE31F24DAFF86009C04E6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		846BE32624DB0357009C04E6 /* MST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MST.swift; sourceTree = "<group>"; };
-		846BE32824DB06E5009C04E6 /* IndexPriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPriorityQueue.swift; sourceTree = "<group>"; };
 		8470CFF624CB2E4E00021D4B /* SushiReviews */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SushiReviews; sourceTree = BUILT_PRODUCTS_DIR; };
 		8470CFF824CB2E4E00021D4B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8472D0DD24B5C6CD000B57C7 /* QuickSort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QuickSort; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -454,7 +452,6 @@
 			children = (
 				846BE31F24DAFF86009C04E6 /* main.swift */,
 				846BE32624DB0357009C04E6 /* MST.swift */,
-				846BE32824DB06E5009C04E6 /* IndexPriorityQueue.swift */,
 			);
 			path = MST;
 			sourceTree = "<group>";
@@ -1075,7 +1072,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846BE32924DB06E5009C04E6 /* IndexPriorityQueue.swift in Sources */,
 				846BE32724DB0357009C04E6 /* MST.swift in Sources */,
 				846BE32024DAFF86009C04E6 /* main.swift in Sources */,
 			);
