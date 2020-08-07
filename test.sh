@@ -38,7 +38,7 @@ for t in $files ; do
     file=$( basename $t )
 		if [[ $result == $expected ]]; then
       echo -en "\033[0;32m.\033[0;39m"
-      echo "$file: time: ${time} ms" >> $SUCCESS_FILE
+      echo "$file: answer: ${answer} time: ${time} ms" >> $SUCCESS_FILE
 
       success[$successCount]=$line
 			((successCount++))
