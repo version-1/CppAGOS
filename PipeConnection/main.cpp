@@ -86,7 +86,7 @@ int main() {
         cin >> s >> t >> w;
         Edge e = {s - 1, t -1, w};
         edges[i] = e;
-        if (i < M - 1) {
+        if (i < N - 1) {
           sum += w;
         }
     }
