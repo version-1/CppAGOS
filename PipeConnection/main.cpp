@@ -41,6 +41,7 @@ struct UnionFind {  // The range of node number is u 0 v n-1
         }
     }
     int findRoot(int x) {
+
         if (x != parents[x]) parents[x] = findRoot(parents[x]);
         return parents[x];
     }
@@ -84,13 +85,29 @@ int main() {
     cout << "input:\n";
     cin >> N >> M >> D;
     vector<Edge> edges(M);
+    long sum = 0;
     for (int i = 0; i < M; i++) {
         long long s, t, w;
         cin >> s >> t >> w;
         Edge e = {s - 1, t -1, w};
         edges[i] = e;
+        if (i < M - 1) {
+          sum += w;
+        }
     }
+    
     Kruskal krs(edges, N);
-    cout << krs.sum << endl;
+    
+    if (sum == krs.sum) {
+        return 0;
+    }
+    
+    for (int i = krs.edges.size() - 1; i >= 0; i--) {
+        sum -= krs.edges[i].cost;
+        if (sum <= krs.sum) {
+            return krs.edges.size() - i;
+        }
+    }
+    
     return 0;
 }
