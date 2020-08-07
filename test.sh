@@ -1,5 +1,7 @@
 #! /bin/bash
 PRODUCTS_PATH=/Users/admin/Library/Developer/Xcode/DerivedData/CppAGOS-chpicopqxleupjfsxjmfhenpgqii/Build/Products/Debug
+SUCCESS_FILE=success.tmp
+FAIL_FILE=fail.tmp
 exec=$PRODUCTS_PATH/$1
 cases=$2
 
@@ -18,7 +20,8 @@ if [[ ! -d "$cases" ]]; then
 	exit 1
 fi
 
-fail=()
+:>$SUCCESS_FILE
+:>$FAIL_FILE
 
 files=`ls "$cases"/*.in`
 successCount=0
@@ -35,12 +38,14 @@ for t in $files ; do
     file=$( basename $t )
 		if [[ $result == $expected ]]; then
       echo -en "\033[0;32m.\033[0;39m"
+      echo "$file: time: ${time} ms" >> $SUCCESS_FILE
+
+      success[$successCount]=$line
 			((successCount++))
 		else
       # echo $( basename $t );
       echo -en "\033[0;31mx\033[0;39m"
-      line="$file:expected:$expected,got:$result"
-      fail[$failCount]=$line
+      echo "$file: expected:$expected got:$result" >> $FAIL_FILE
       ((failCount++))
 		fi
 	fi
@@ -51,14 +56,16 @@ total=$(( countSuccess + countFail ))
 if [ $total > 0 ]; then
   echo ""
   echo ""
-	echo "Finsihed"
-	echo "Success=${successCount} Fail=${failCount}"
+	echo "[[[Done]]]"
+	echo "success=${successCount} fail=${failCount}"
 
   echo ""
   echo ""
+  echo "[[[successes]]]"
+  cat $SUCCESS_FILE
 
-  for e in ${fail[@]}; do
-    echo ${e}
-    echo ""
-  done
+  echo ""
+  echo ""
+  echo "[[[fails]]]"
+  cat $FAIL_FILE
 fi
