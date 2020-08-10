@@ -100,6 +100,8 @@ int main() {
     
     Kruskal krs(edges, N);
     
+
+    
     long long days = 0;
     for (long long i = 0; i < N -1; i++){
         if (!krs.edges[i].activate) {
